@@ -16,8 +16,8 @@ var rules_onConfigure      = null;
 // create barcodes to test: https://products.aspose.app/barcode/generate
 // ............................................................
 var rules_onDecode         = function(decode) {
-	var plch_tab = "<TAB>";  	// Tabulator
-	var plch_enter = "<CR>"; 	// Carriage Return
+	var plch_tab = "<tab>";  	// Tabulator
+	var plch_enter = "<cr>"; 	// Carriage Return
 
 	var cc_tab = codeXMLStart + "/t" + codeXMLEnd;
 	var cc_enter = codeXMLStart + "/n" + codeXMLEnd;
