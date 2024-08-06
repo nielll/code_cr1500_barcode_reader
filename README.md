@@ -35,4 +35,5 @@ The script can be extended to support further control keys or logic.
 6. Acknowledge
     - product website: https://codecorp.com/products/code-reader-1500
     - Keyboard Support: German-Swiss Keyboard Mapping for Windows ![image](https://github.com/user-attachments/assets/41024b4f-3273-4224-901c-7c0aaa5acdfc)
+    - Beep off / Vibration on: ![image](https://github.com/user-attachments/assets/56a1d014-d358-492e-b9f3-c1eee396e58d)
     - Swiss German Scancodes: ![image](https://github.com/user-attachments/assets/774ed157-bcde-4a61-a155-0d87e27cdb1a)
