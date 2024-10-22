@@ -15,6 +15,8 @@ var cc_f12 = codeXMLStart + "/f12" + codeXMLEnd;
 var cc_rStart = codeXMLStart + "/k071600000000" + codeXMLEnd;
 var cc_rEnd = codeXMLStart + "/k070800000000" + codeXMLEnd;
 var cc_ctrlF10 = codeXMLStart + "/k014300000000" + codeXMLEnd;
+var cc_ctrlA = codeXMLStart + "/k010400000000" + codeXMLEnd;
+var cc_del = codeXMLStart + "/k012A00000000" + codeXMLEnd;
 
 var rules_onDecodeAttempt  = null;
 var rules_onDecodes        = null;
@@ -61,12 +63,12 @@ var rules_onDecode         = function(decode) {
 	
 	if (regexProbeEtiketten.test(decode.data)) {
 		var d = decode.data.split('_');
-		decode.data = cc_ctrlF10 + "BarcodeScanner Proben laden" + cc_enter + "<sleep rep=1>" + d[0] + cc_tab + cc_tab + d[1] + cc_tab + cc_enter;
+		decode.data = cc_ctrlF10 + "BarcodeScanner Proben laden" + cc_enter + "<sleep rep=1>" + d[0] + cc_tab + cc_tab + d[1] + cc_tab + cc_enter + "<sleep rep=1>" + cc_ctrlF10 + cc_del;
 	}
 
 	if (regexAuftrag.test(decode.data)) {
 		var d = decode.data.split('_');
-		decode.data = cc_ctrlF10 + "BarcodeScanner Proben laden" + cc_enter + "<sleep rep=1>" + cc_tab + d[1] + cc_tab + cc_tab + cc_enter;
+		decode.data = cc_ctrlF10 + "BarcodeScanner Proben laden" + cc_enter + "<sleep rep=1>" + cc_tab + d[1] + cc_tab + cc_tab + cc_enter + "<sleep rep=1>" + cc_ctrlF10 + cc_del;
 	}
 
 	try {
